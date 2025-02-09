@@ -62,7 +62,7 @@ const CONFIG = {
 			id: '3',
 			name: 'Translator',
 			icon: 'languages',
-			link: 'https://xurxorguezz.github.io/translator',
+			link: 'https://xurxorguezz.github.io/translatorbyxurxorguezz',
 		},
 		{
 			id: '6',
