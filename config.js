@@ -145,8 +145,8 @@ const CONFIG = {
 					link: 'https://xurxorguezz.github.io',
 				},
 				{
-					name: 'Toolify',
-					link: 'https://toolify.ai/',
+					name: 'ChatGPT',
+					link: 'https://chatgpt.com/',
 				},
 				{
 					name: 'Bible',
