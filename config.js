@@ -60,9 +60,9 @@ const CONFIG = {
 		},
 		{
 			id: '3',
-			name: 'AulaVirtual',
-			icon: 'trello',
-			link: 'https://www.edu.xunta.gal/centros/iessalvaterramino/aulavirtual/',
+			name: 'Translator',
+			icon: 'languages',
+			link: 'https://xurxorguezz.github.io/translator',
 		},
 		{
 			id: '6',
