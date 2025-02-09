@@ -20,8 +20,8 @@ const CONFIG = {
 	language: 'es',
 
 	trackLocation: true, 
-	defaultLatitude: '42.082',
-	defaultLongitude: '-8.499',
+	defaultLatitude: '42.23282',
+	defaultLongitude: '-8.72264',
 
 	autoChangeTheme: true,
 
