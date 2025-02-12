@@ -149,12 +149,12 @@ const CONFIG = {
 					link: 'https://chatgpt.com/',
 				},
 				{
-					name: 'Bible',
-					link: 'https://www.bible.com/es/bible/',
+					name: 'Traductor',
+					link: 'https://xurxorguezz.github.io/translatorbyxurxorguezz/',
 				},
 				{
-					name: 'Quote Of The Day',
-					link: 'https://proverbia.net/frase-del-dia',
+					name: 'localhost',
+					link: 'http://127.0.0.1:5500/',
 				},
 			],
 		},
