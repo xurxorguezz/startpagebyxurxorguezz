@@ -145,16 +145,16 @@ const CONFIG = {
 					link: 'https://xurxorguezz.github.io',
 				},
 				{
+					name: 'Localhost',
+					link: 'http://127.0.0.1:5500/',
+				},
+				{
 					name: 'ChatGPT',
 					link: 'https://chatgpt.com/',
 				},
 				{
 					name: 'Traductor',
-					link: 'https://xurxorguezz.github.io/translatorbyxurxorguezz/',
-				},
-				{
-					name: 'localhost',
-					link: 'http://127.0.0.1:5500/',
+					link: 'http://xurxorguezz.github.io/translatorbyxurxorguezz/',
 				},
 			],
 		},
