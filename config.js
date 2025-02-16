@@ -153,8 +153,8 @@ const CONFIG = {
 					link: 'https://chatgpt.com/',
 				},
 				{
-					name: 'Traductor',
-					link: 'http://xurxorguezz.github.io/translatorbyxurxorguezz/',
+					name: 'Convertio',
+					link: 'https://convertio.co/',
 				},
 			],
 		},
