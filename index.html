@@ -6,13 +6,56 @@
 		<link rel=" shortcut icon" type="image/png" href="assets/icons/favicon.png" />
 		<link rel="stylesheet" href="app.css" />
 		<script src="https://unpkg.com/lucide@latest"></script>
+		<style>
+			.search-container {
+				position: absolute;
+				top: 45px;
+				left: 50%;
+				transform: translateX(-50%);
+				max-width: 300px;
+				width: 100%;
+			}
+
+			.search-form {
+				display: flex;
+				background: var(--cards);
+				border-radius: 12px;
+				padding: 8px;
+			}
+
+			.search-input {
+				flex: 1;
+				background: transparent;
+				border: none;
+				color: var(--fg);
+				font-size: 14px;
+				padding: 4px 8px;
+				outline: none;
+			}
+
+			.search-input::placeholder {
+				color: var(--fg);
+				opacity: 0.7;
+			}
+
+			.search-button {
+				background: transparent;
+				border: none;
+				color: var(--fg);
+				cursor: pointer;
+				padding: 4px;
+			}
+
+			.search-button:hover {
+				opacity: 0.8;
+			}
+		</style>
 	</head>
 	<body class="">
 		<button id="themeButton">
 			<i id="themeIcon" icon-name="moon"></i>
 		</button>
 		<div class="container">
-
 			<div class="timeBlock">
 				<div class="clock">
 					<div id="hour"></div>
@@ -21,8 +64,14 @@
 				</div>
 				<div id="greetings"></div>
 			</div>
-
-
+			<div class="search-container">
+				<form class="search-form" action="https://www.google.com/search" method="get" target="_blank">
+					<input type="text" class="search-input" name="q" placeholder="Buscar...">
+					<button type="submit" class="search-button">
+						<i icon-name="search"></i>
+					</button>
+				</form>
+			</div>
 			<div class="weatherBlock">
 				<div class="date">
 					<div id="month"></div>
@@ -40,29 +89,21 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="linksBlock" id="linksBlock">
 				<div class="linksBlockLeft" id="linksBlockLeft"></div>
 				<div class="linksBlockRight" id="linksBlockRight"></div>
 			</div>
 		</div>
-
-
 		<script src="config.js"></script>
-
-
 		<script src="assets/js/layout.js"></script>
 		<script src="assets/js/theme.js"></script>
 		<script src="assets/js/time.js"></script>
 		<script src="assets/js/greeting.js"></script>
 		<script src="assets/js/weather.js"></script>
-
 		<script src="assets/js/buttons.js"></script>
 		<script src="assets/js/lists.js"></script>
-
 		<script>
 			lucide.createIcons();
 		</script>
 	</body>
-
 </html>
