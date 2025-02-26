@@ -65,8 +65,8 @@
 				<div id="greetings"></div>
 			</div>
 			<div class="search-container">
-				<form class="search-form" action="https://www.google.com/search" method="get" target="_blank">
-					<input type="text" class="search-input" name="q" placeholder="Buscar...">
+				<form class="search-form" id="searchForm" onsubmit="return handleSearch(event)">
+					<input type="text" class="search-input" id="searchInput" name="q" placeholder="Search...">
 					<button type="submit" class="search-button">
 						<i icon-name="search"></i>
 					</button>
@@ -103,6 +103,47 @@
 		<script src="assets/js/buttons.js"></script>
 		<script src="assets/js/lists.js"></script>
 		<script>
+			// Función para manejar la búsqueda
+			function handleSearch(event) {
+				event.preventDefault();
+				
+				const searchInput = document.getElementById('searchInput');
+				const query = searchInput.value.trim();
+				
+				// Si está vacío, no hacer nada
+				if (!query) return false;
+				
+				// Comprobar si es una URL
+				if (isUrl(query)) {
+					// Si no tiene http o https, añadir https://
+					let url = query;
+					if (!url.startsWith('http://') && !url.startsWith('https://')) {
+						url = 'https://' + url;
+					}
+					window.location.href = url;
+				} else {
+					// Si no es URL, buscar en Google
+					window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+				}
+				
+				// Limpiar el input después de la búsqueda
+				searchInput.value = '';
+				return false;
+			}
+			
+			// Función para detectar si es una URL
+			function isUrl(string) {
+				// Patrón simple para detectar dominios
+				const pattern = /^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?([\/\w\.-]*)*\/?$/;
+				return pattern.test(string);
+			}
+			
+			// Autoenfoque en el campo de búsqueda al cargar la página
+			document.addEventListener('DOMContentLoaded', function() {
+				const searchInput = document.getElementById('searchInput');
+				searchInput.focus();
+			});
+			
 			lucide.createIcons();
 		</script>
 	</body>
